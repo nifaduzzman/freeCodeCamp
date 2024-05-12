@@ -4,7 +4,6 @@ describe('Donate page', () => {
     cy.login('certified-user');
     cy.visit('/donate');
     cy.get("[data-cy='donation-tier-selection-button']").click();
-
     cy.get('.donation-elements', { timeout: 10000 }).within(() => {
       cy.fillElementsInput('cardNumber', '4242424242424242');
       cy.fillElementsInput('cardExpiry', '1025');
